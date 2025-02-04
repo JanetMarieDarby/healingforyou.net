@@ -4,6 +4,11 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+// Potential XSS vulnerability in jQuery FIX
+jQuery.htmlPrefilter = function( html ) {
+	return html;
+};
+
 (function($) {
 
 	var	$window = $(window),
